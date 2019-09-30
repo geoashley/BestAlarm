@@ -18,8 +18,11 @@ describe('Header', ()=>{
   });
 
   it('Header Text click', ()=>{
-    text.simulate('click')
-    expect(text.render().text()).toEqual('Welcome User');
+    text.simulate('press');
+    //wrapper.update();
+    const textClicked = wrapper.find('Text').first();
+
+    expect(textClicked.render().text()).toEqual('Welcome User');
   });
 
 });
