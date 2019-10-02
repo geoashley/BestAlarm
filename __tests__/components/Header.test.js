@@ -19,9 +19,7 @@ describe('Header', ()=>{
 
   it('Header Text click', ()=>{
     text.simulate('press');
-    //wrapper.update();
     const textClicked = wrapper.find('Text').first();
-
     expect(textClicked.render().text()).toEqual('Welcome User');
   });
 
